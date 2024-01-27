@@ -6,7 +6,9 @@ function Login() {
   const [pass, setPass] = useState('')
 
   useEffect(() => {
-   
+   if (localStorage.getItem("email") && localStorage.getItem('pass')){
+        navigate('/home')
+   }
   });
   const submit = ()=>{
     if(email !== '' && pass !==''){
